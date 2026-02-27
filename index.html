@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Онлайн-тестування</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h1>🎓 Онлайн-тестування</h1>
+
+      <div id="topicSelect" class="box">
+
+        <!-- Student name fields -->
+        <div class="student-fields">
+          <label for="lastName">
+            <input type="text" id="lastName" placeholder="Введіть прізвище" autocomplete="off">
+          </label>
+
+          <label for="firstName">
+            <input type="text" id="firstName" placeholder="Введіть ім'я" autocomplete="off">
+          </label>
+        </div>
+
+        <h2>Оберіть тему для тесту:</h2>
+        <label><input type="checkbox" value="HTML"> HTML/CSS</label>
+
+        <button id="startBtn">Почати тест</button>
+      </div>
+
+      <div id="quiz" class="box" style="display:none;">
+        <div id="question" class="question"></div>
+        <div id="options" class="options"></div>
+        <div id="feedback" class="feedback"></div>
+        <button id="backBtn">Назад до тем</button>
+        <button id="nextBtn" disabled>Наступне питання</button>
+      </div>
+
+      <div id="result" class="box" style="display:none;"></div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
