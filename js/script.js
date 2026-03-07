@@ -162,12 +162,16 @@ function showQuestion() {
   feedbackEl.textContent = "";
   nextBtn.disabled       = true;
 
-  q.options.forEach((opt, i) => {
-    const btn = document.createElement("button");
-    btn.textContent = opt;
-    btn.addEventListener("click", () => {
-      const correct = i === q.correct;
-      stats.push({ question: q.question, correct });
+  const shuffled = q.options
+  .map((opt, i) => ({ opt, i }))
+  .sort(() => 0.5 - Math.random());
+
+shuffled.forEach(({ opt, i }) => {
+  const btn = document.createElement("button");
+  btn.textContent = opt;
+  btn.addEventListener("click", () => {
+    const correct = i === q.correct;
+    stats.push({ question: q.question, correct });
       feedbackEl.textContent =
         (correct ? "✅ Правильно! " : "❌ Не зовсім. ") + q.explanation;
       Array.from(optionsDiv.children).forEach(b => b.disabled = true);
