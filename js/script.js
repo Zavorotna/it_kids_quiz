@@ -1,4 +1,4 @@
-const QUESTIONS_COUNT = 20;
+const QUESTIONS_COUNT = 30;
 
 let questionBank = [
   {id:1, topic:"HTML", question:"Що таке HTML?", options:["Мова розмітки","Мова програмування","Браузер","Сервер"], correct:0, explanation:"HTML – це мова розмітки веб-сторінок."},
@@ -80,6 +80,20 @@ let questionBank = [
   {id:83, topic:"HTML", question:"Що буде результатом коду? <div style='margin:20px;'></div>", options:["Внутрішній відступ 20px","Зовнішній відступ 20px","Рамка 20px","Ширина 20px"], correct:1, explanation:"margin додає зовнішній відступ."},
   {id:84, topic:"HTML", question:"Що буде результатом коду? <div style='padding:20px; background:red;'>Text</div>", options:["Зовнішній відступ","Текст відступить всередині блоку","Рамка 20px","Текст стане червоним"], correct:1, explanation:"padding додає внутрішній відступ."},
   {id:85, topic:"HTML", question:"Що буде результатом коду? <a href='#' style='color:red;'>Link</a>", options:["Червоне посилання","Синє посилання","Жирне посилання","Посилання зникне"], correct:0, explanation:"color:red змінює колір тексту посилання."}
+  {id:86, topic:"HTML", question:"Яке значення position встановлене за замовчуванням?", options:["relative","absolute","static","fixed"], correct:2, explanation:"За замовчуванням всі елементи мають position: static."},
+  {id:87, topic:"HTML", question:"Що робить position: relative?", options:["Видаляє елемент","Дозволяє зміщувати елемент відносно його початкового місця","Прикріплює до вікна","Робить елемент flex"], correct:1, explanation:"position: relative дозволяє зміщувати елемент відносно його початкового положення."},
+  {id:88, topic:"HTML", question:"Що робить position: absolute?", options:["Позиціонує відносно найближчого батьківського","Позиціонує відносно body","Приховує елемент","Робить inline"], correct:0, explanation:"absolute позиціонується відносно найближчого батька з position ≠ static."},
+  {id:89, topic:"HTML", question:"Що робить position: fixed?", options:["Фіксує елемент відносно вікна браузера","Фіксує в контейнері","Ховає елемент","Робить flex"], correct:0, explanation:"position: fixed прив'язує елемент до вікна браузера."},
+  {id:91, topic:"HTML", question:"Який стиль зміщує елемент зверху?", options:["left","top","right","bottom"], correct:1, explanation:"top задає відступ від верхнього краю."},
+  {id:92, topic:"HTML", question:"Який стиль зміщує елемент зліва?", options:["top","right","left","center"], correct:2, explanation:"left задає відступ від лівого краю."},
+  {id:93, topic:"HTML", question:"Що робить z-index?", options:["Змінює прозорість","Керує порядком накладання елементів","Змінює ширину","Змінює позицію"], correct:1, explanation:"z-index керує тим, який елемент буде поверх інших."},
+  {id:94, topic:"HTML", question:"Що робить псевдоелемент ::before?", options:["Додає елемент перед контентом","Додає елемент після контенту","Ховає контент","Додає рамку"], correct:0, explanation:"::before вставляє віртуальний елемент перед контентом."},
+  {id:95, topic:"HTML", question:"Що робить псевдоелемент ::after?", options:["Додає елемент після контенту","Додає елемент перед контентом","Видаляє текст","Додає margin"], correct:0, explanation:"::after вставляє віртуальний елемент після контенту."},
+  {id:96, topic:"HTML", question:"Яка властивість обов'язкова для ::before та ::after?", options:["display","content","position","text"], correct:1, explanation:"Без властивості content псевдоелементи не відображаються."},
+  {id:97, topic:"HTML", question:"Що буде результатом коду? .box::before {content:'★';}", options:["Зірка перед текстом","Зірка після тексту","Нічого","Текст стане жирним"], correct:0, explanation:"::before додає символ перед контентом елемента."},
+  {id:98, topic:"HTML", question:"Що буде результатом коду? .box::after {content:'✔';}", options:["Галочка перед текстом","Галочка після тексту","Текст зникне","Рамка"], correct:1, explanation:"::after додає символ після контенту."},
+  {id:99, topic:"HTML", question:"Що буде результатом коду? .box{position:relative;} .child{position:absolute; top:0; left:0;}", options:["child буде у верхньому лівому куті box","child буде у центрі","child зникне","child стане flex"], correct:0, explanation:"absolute позиціонується відносно батька з position: relative."},
+  {id:100, topic:"HTML", question:"Що буде результатом коду? .box{position:fixed; bottom:0;}", options:["Елемент прикріпиться до низу екрана","Елемент буде в центрі","Елемент стане inline","Елемент зникне"], correct:0, explanation:"fixed закріплює елемент відносно вікна браузера."}
 ];
 
 // ── DOM refs ──────────────────────────────────────────────
