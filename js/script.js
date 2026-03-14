@@ -1,4 +1,4 @@
-const QUESTIONS_COUNT = 30;
+const QUESTIONS_COUNT = 35;
 
 let questionBank = [
   {id:1, topic:"HTML", question:"Що таке HTML?", options:["Мова розмітки","Мова програмування","Браузер","Сервер"], correct:0, explanation:"HTML – це мова розмітки веб-сторінок."},
@@ -93,7 +93,17 @@ let questionBank = [
   {id:97, topic:"HTML", question:"Що буде результатом коду? .box::before {content:'★';}", options:["Зірка перед текстом","Зірка після тексту","Нічого","Текст стане жирним"], correct:0, explanation:"::before додає символ перед контентом елемента."},
   {id:98, topic:"HTML", question:"Що буде результатом коду? .box::after {content:'✔';}", options:["Галочка перед текстом","Галочка після тексту","Текст зникне","Рамка"], correct:1, explanation:"::after додає символ після контенту."},
   {id:99, topic:"HTML", question:"Що буде результатом коду? .box{position:relative;} .child{position:absolute; top:0; left:0;}", options:["child буде у верхньому лівому куті box","child буде у центрі","child зникне","child стане flex"], correct:0, explanation:"absolute позиціонується відносно батька з position: relative."},
-  {id:100, topic:"HTML", question:"Що буде результатом коду? .box{position:fixed; bottom:0;}", options:["Елемент прикріпиться до низу екрана","Елемент буде в центрі","Елемент стане inline","Елемент зникне"], correct:0, explanation:"fixed закріплює елемент відносно вікна браузера."}
+  {id:100, topic:"HTML", question:"Що буде результатом коду? .box{position:fixed; bottom:0;}", options:["Елемент прикріпиться до низу екрана","Елемент буде в центрі","Елемент стане inline","Елемент зникне"], correct:0, explanation:"fixed закріплює елемент відносно вікна браузера."},
+  {id:101, topic:"CSS", question:"Що робить псевдоселектор :first-child?", options:["Вибирає перший елемент всередині батьківського","Вибирає останній елемент","Вибирає всі елементи","Вибирає елемент з id"], correct:0, explanation:":first-child вибирає перший дочірній елемент батьківського контейнера."},
+  {id:102, topic:"CSS", question:"Що робить псевдоселектор :last-child?", options:["Вибирає останній елемент","Вибирає перший елемент","Вибирає всі елементи","Видаляє елемент"], correct:0, explanation:":last-child вибирає останній дочірній елемент."},
+  {id:103, topic:"CSS", question:"Що робить :nth-child(3)?", options:["Вибирає третій елемент","Вибирає кожен третій елемент","Вибирає перші три елементи","Вибирає всі елементи"], correct:0, explanation:":nth-child(3) вибирає третій елемент серед сусідів."},
+  {id:104, topic:"CSS", question:"Що означає :nth-child(odd)?", options:["Вибирає парні елементи","Вибирає непарні елементи","Вибирає перший елемент","Вибирає останній елемент"], correct:1, explanation:"odd означає непарні елементи: 1,3,5,7..."},
+  {id:105, topic:"CSS", question:"Що означає :nth-child(even)?", options:["Вибирає непарні елементи","Вибирає всі елементи","Вибирає парні елементи","Вибирає перший елемент"], correct:2, explanation:"even означає парні елементи: 2,4,6,8..."},
+  {id:106, topic:"CSS", question:"Що робить селектор div > p ?", options:["Вибирає всі p всередині div","Вибирає тільки прямі дочірні p","Вибирає сусідні p","Вибирає всі p на сторінці"], correct:1, explanation:"> вибирає тільки прямі дочірні елементи."},
+  {id:107, topic:"CSS", question:"Що робить селектор div + p ?", options:["Вибирає всі p після div","Вибирає перший p одразу після div","Вибирає всі p всередині div","Вибирає останній p"], correct:1, explanation:"+ вибирає перший сусідній елемент після div."},
+  {id:108, topic:"CSS", question:"Що робить селектор div ~ p ?", options:["Вибирає всі p після div на тому ж рівні","Вибирає тільки перший p","Вибирає всі p всередині div","Вибирає останній p"], correct:0, explanation:"~ вибирає всі сусідні p після div на одному рівні."},
+  {id:109, topic:"CSS", question:"Що вибере селектор li:first-child ?", options:["Перший li у списку","Останній li","Всі li","Кожен другий li"], correct:0, explanation:"first-child вибере перший елемент li серед сусідів."},
+  {id:110, topic:"CSS", question:"Що вибере селектор li:nth-child(2)?", options:["Другий елемент списку","Кожен другий елемент","Останній елемент","Перший елемент"], correct:0, explanation:"nth-child(2) вибирає другий елемент серед сусідів."}
 ];
 
 // ── DOM refs ──────────────────────────────────────────────
