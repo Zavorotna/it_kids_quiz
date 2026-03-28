@@ -1,4 +1,4 @@
-const QUESTIONS_COUNT = 35;
+const QUESTIONS_COUNT = 20;
 
 let questionBank = [
   {id:1, topic:"HTML", question:"Що таке HTML?", options:["Мова розмітки","Мова програмування","Браузер","Сервер"], correct:0, explanation:"HTML – це мова розмітки веб-сторінок."},
