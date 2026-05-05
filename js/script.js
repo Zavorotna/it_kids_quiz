@@ -166,6 +166,7 @@ let questionBank = [
   {id:283, topic:"HTML", question:"Що робить box-sizing:border-box?", options:["padding додається до width збільшуючи розмір","width включає padding і border","width ігнорується","margin змінюється"], correct:1, explanation:"border-box: ширина включає padding і border — зручна модель."},
 ];
 
+
 // ── DOM refs ──────────────────────────────────────────────
 const startBtn     = document.getElementById("startBtn");
 const topicSelect  = document.getElementById("topicSelect");
